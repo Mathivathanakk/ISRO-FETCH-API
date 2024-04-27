@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISRO</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,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"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title text-center mb-5">ISRO SPACE CRAFTS INFORMATION</h1>
+
+      <h4 class="title text-center mb-5">CUSTOMER SATELLITES DETAILS</h4>
+
+      <!--TABLE FOR CUSTOMER SATELLITES-->
+      <table class="table table-danger table-responsive">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">COUNTRY</th>
+            <th scope="col">LAUNCHER</th>
+            <th scope="col">LAUNCHED DATE</th>
+            <th scope="col">MASS</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--TABLE FOR ISRO CENTERS-->
+
+      <h4 class="title text-center m-5">ISRO CENTERS</h4>
+      <table class="table table-info table-responsive">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">PLACE</th>
+            <th scope="col">STATE</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody1">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!--BOOTSTRAP SCRIPT-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <!---JAVASCRIPT SCRIPT-->
+    <script src="script.js"></script>
+  </body>
+</html>
