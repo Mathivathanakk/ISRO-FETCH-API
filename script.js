@@ -1,26 +1,38 @@
-//fetch the data from api of customer satellites
+//adding eventlistener to the button
 
-const url = fetch("https://isro.vercel.app/api/customer_satellites");
-url
-  .then((data) => data.json()) //converted to json format and to object
-  .then((result) => {
-    //displaying the data in the table
-    const objectData = result.customer_satellites;
-    let tableData = "";
-    objectData.map((values) => {
-      tableData += ` <tr>
+const button=document.querySelector(".btn")
+button.addEventListener("click",()=>{
+  satellitedetails()
+  centredetails()
+})
+//function for satellite details
+function satellitedetails() {
+  //fetch the data from api of customer satellite
+  const url = fetch("https://isro.vercel.app/api/customer_satellites");
+  url
+    .then((data) => data.json()) //converted to json format and to object
+    .then((result) => {
+      //displaying the data in the table
+      const objectData = result.customer_satellites;
+      let tableData = "";
+      objectData.map((values) => {
+        tableData += ` <tr>
       <td>${values.id}</td>
       <td>${values.country}</td>
       <td>${values.launcher}</td>
       <td>${values.launch_date}</td>
       <td>${values.mass}</td>
     </tr>`;
-    });
-    //getting the html elements and adding the data in innerhtml
-    document.getElementById("tableBody").innerHTML = tableData;
-  }) //else catch the error
-  .catch((error) => console.log(error));
+      });
+      //getting the html elements and adding the data in innerhtml
+      document.getElementById("tableBody").innerHTML = tableData;
+    }) //else catch the error
+    .catch((error) => console.log(error));
+}
 
+
+//function for center details
+function centredetails(){
 //fetching the data form api of ISRO centres
 
 const response1 = fetch("https://isro.vercel.app/api/centres");
@@ -43,3 +55,4 @@ response1
     document.getElementById("tableBody1").innerHTML = tableData1;
   })
   .catch((error) => console.log(error)); //else catch the error
+}
