@@ -25,7 +25,7 @@ function satellitedetails() {
     </tr>`;
       });
       //getting the html elements and adding the data in innerhtml
-      document.getElementById("tableBody").innerHTML = tableData;
+      document.querySelector(".tableBody").innerHTML = tableData;
     }) //else catch the error
     .catch((error) => console.log(error));
 }
@@ -52,7 +52,7 @@ response1
         </tr>`;
     });
     //getting the html elements and adding the data in innerhtml
-    document.getElementById("tableBody1").innerHTML = tableData1;
+    document.querySelector(".tableBody1").innerHTML = tableData1;
   })
   .catch((error) => console.log(error)); //else catch the error
 }
